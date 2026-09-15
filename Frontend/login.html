@@ -5,68 +5,119 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login - ShopEase</title>
 
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="icon" href="data:,">
+
 </head>
 
 <body>
 
-    <div class="auth-container">
+    <!-- Navbar -->
+    <header>
 
-        <div class="auth-box">
+        <nav>
 
-            <h1>ShopEase</h1>
+            <div class="logo">
+                ShopEase
+            </div>
 
-            <h2>Login</h2>
+            <div class="nav-links">
 
-            <form onsubmit="loginUser(event)">
+                <a href="index.html">Home</a>
 
-                <label>Email</label>
+                <a href="product.html">Products</a>
 
-                <input
-                    type="email"
-                    id="loginEmail"
-                    placeholder="Enter your email"
-                    required
-                >
+                <a href="#">Categories</a>
 
-                <label>Password</label>
+                <a href="#">Offers</a>
 
-                <input
-                    type="password"
-                    id="loginPassword"
-                    placeholder="Enter your password"
-                    required
-                >
+            </div>
 
-                <button type="submit">
-                    Login
-                </button>
+            <div class="nav-actions">
 
-            </form>
+                <a href="login.html">Login</a>
 
-            <p id="loginMessage"></p>
+                <a href="#">Cart 🛒</a>
 
-            <p>
-                Don't have an account?
-                <a href="register.html">
-                    Register
-                </a>
-            </p>
+            </div>
 
-            <a href="index.html">
-                ← Back to Home
-            </a>
+        </nav>
 
-        </div>
+    </header>
 
-    </div>
 
+    <!-- Login Section -->
+    <main>
+
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <h1>Welcome Back</h1>
+
+                <p>Login to your ShopEase account</p>
+
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button type="button" id="loginBtn">
+                        Login
+                    </button>
+
+
+                    <p class="signup-text">
+                        Don't have an account?
+                        <a href="#">Sign Up</a>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
