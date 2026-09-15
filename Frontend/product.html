@@ -5,120 +5,134 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <title>Products - ShopEase</title>
+    <title>Product Details</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" href="data:,">
 
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <header>
+
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
 
         <nav>
-
-            <!-- Logo -->
-            <div class="logo">
-                ShopEase
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="nav-links">
-
-                <a href="index.html">Home</a>
-
-                <a href="product.html">Products</a>
-
-                <a href="#">Categories</a>
-
-                <a href="#">Offers</a>
-
-            </div>
-
-            <!-- User Actions -->
-            <div class="nav-actions">
-
-                <a href="login.html" id="loginLink">Login</a>
-
-                <a href="cart.html"> Cart 🛒
-                    <span id="cartCount">0</span>
-                </a>
-            </div>
-
+            <a href="index.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
         </nav>
+
+        <div class="nav-actions">
+
+            <input
+                type="text"
+                placeholder="Search products..."
+            >
+
+            <button>Login</button>
+
+            <button onclick="goToCart()">
+
+                     🛒 Cart
+                (<span id="cartCount">0</span>)
+            </button>
+        </div>
 
     </header>
 
 
-    <!-- Products Page -->
-    <main>
+    <!-- Product Details -->
 
-        <section class="products-page">
+    <section class="product-details">
 
-            <h1>All Products</h1>
+        <!-- Product Image -->
 
-            <p>Explore our wide range of products.</p>
+        <div class="product-large-image">
+            💻
+        </div>
 
 
-            <!-- Search -->
-            <div class="product-search">
+        <!-- Product Information -->
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search products..."
-                >
+        <div class="product-info">
 
-                <button>Search</button>
+            <h1>Laptop Model 19</h1>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span>4.8 / 5</span>
+            </div>
+
+            <h2 class="price">
+                ₹65,000
+            </h2>
+
+            <p>
+                High performance laptop suitable for
+                business, education and professional use.
+            </p>
+
+            <p>
+                <strong>Availability:</strong>
+                In Stock
+            </p>
+
+
+            <!-- Quantity -->
+
+            <div class="quantity">
+
+                <h3>Quantity</h3>
+
+                <button onclick="decreaseQuantity()">
+                    -
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button onclick="increaseQuantity()">
+                    +
+                </button>
 
             </div>
 
 
-            <!-- Category Filter -->
-            <div class="category-filter">
+            <!-- Buttons -->
 
-                <button>All</button>
+            <div class="product-buttons">
 
-                <button>Electronics</button>
+                <<button
+    class="cart-btn"
+    onclick="addCurrentProductToCart()">
 
-                <button>Sports</button>
+    🛒 Add to Cart
 
-                <button>Home & Kitchen</button>
+</button>
 
-                <button>Footwear</button>
+                <button class="buy-btn">
 
-                <button>Fashion</button>
+                    Buy Now
 
-                <button>Beauty</button>
-
-                <button>Grocery</button>
-
-                <button>Books</button>
+                </button>
 
             </div>
 
+        </div>
 
-            <!-- Product Container -->
-            <div
-                class="products"
-                id="productContainer"
-            >
-
-                <!-- Products will be loaded using JavaScript -->
-
-            </div>
-
-        </section>
-
-    </main>
+    </section>
 
 
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>

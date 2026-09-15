@@ -5,172 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ShopEase</title>
+    <title>E-Commerce Store</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="data:,">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <header>
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
+
         <nav>
-
-            <!-- Logo -->
-            <div class="logo">
-                ShopEase
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="#">Categories</a>
-                <a href="#">Offers</a>
-            </div>
-
-            <!-- User Actions -->
-            <div class="nav-actions">
-                <a href="login.html" id="loginLink">Login</a>
-              <a href="cart.html">
-                     Cart 🛒
-            <span id="cartCount">0</span></a>
-            </div>
-
+            <a href="#">Home</a>
+            <a href="product.html">Products</a>
+            <a href="#">Categories</a>
+            <a href="#">Offers</a>
         </nav>
+
+        <div class="nav-actions">
+            <input type="text" placeholder="Search products...">
+            <button>Login</button>
+        <button onclick="goToCart()">
+
+    🛒 Cart
+    (<span id="cartCount">0</span>)
+
+        </button>
+        </div>
+
     </header>
-<!-- Hero Section -->
-<section class="hero">
 
-    <div class="hero-content">
 
-        <h1>Shop Smart. Live Better.</h1>
+    <!-- Hero Section -->
+    <section class="hero">
 
-        <p>
-            Discover quality products at the best prices.
-            Shop your favorites with ShopEase.
-        </p>
+        <div class="hero-content">
 
-        <button>Shop Now</button>
+            <h1>Shop Smart. Live Better.</h1>
 
-    </div>
+            <p>
+                Discover amazing products at the best prices.
+            </p>
 
-</section>
+            <button class="shop-btn">
+                Shop Now
+            </button>
 
-<!-- Categories Section -->
-<section class="categories">
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+   
+<section class="section">
 
     <h2>Shop by Category</h2>
 
-    <div class="category-container">
+    <div class="categories">
 
-        <div class="category-card">
-            <div class="category-icon">💻</div>
+        <div class="category"
+             onclick="filterCategory('Electronics')">
+            💻
             <h3>Electronics</h3>
         </div>
 
-        <div class="category-card">
-            <div class="category-icon">⚽</div>
-            <h3>Sports</h3>
-        </div>
-
-        <div class="category-card">
-            <div class="category-icon">🏠</div>
-            <h3>Home & Kitchen</h3>
-        </div>
-
-        <div class="category-card">
-            <div class="category-icon">👟</div>
-            <h3>Footwear</h3>
-        </div>
-
-        <div class="category-card">
-            <div class="category-icon">👕</div>
+        <div class="category"
+             onclick="filterCategory('Fashion')">
+            👕
             <h3>Fashion</h3>
         </div>
 
-        <div class="category-card">
-            <div class="category-icon">💄</div>
-            <h3>Beauty</h3>
+        <div class="category"
+             onclick="filterCategory('Furniture')">
+            🪑
+            <h3>Furniture</h3>
         </div>
 
-        <div class="category-card">
-            <div class="category-icon">🛒</div>
-            <h3>Grocery</h3>
-        </div>
-
-        <div class="category-card">
-            <div class="category-icon">📚</div>
-            <h3>Books</h3>
+        <div class="category"
+             onclick="filterCategory('Mobiles')">
+            📱
+            <h3>Mobiles</h3>
         </div>
 
     </div>
 
 </section>
 
-<!-- Products Section -->
-<section class="products-section">
+    <!-- Products -->
+    <section class="section">
 
     <h2>Featured Products</h2>
 
     <div class="products" id="productContainer">
 
-        <!-- Products will be displayed here using JavaScript -->
-    </div>
+        <!-- Products will be displayed using JavaScript -->
 
-</section>
+    </div>         
 
-<!-- Footer -->
-<footer class="footer">
+    </section>
 
-    <div class="footer-container">
 
-        <!-- About -->
-        <div class="footer-section">
-            <h3>ShopEase</h3>
-            <p>
-                Shop smart and discover quality products
-                at the best prices.
-            </p>
-        </div>
+    <!-- Footer -->
+    <footer>
 
-        <!-- Quick Links -->
-        <div class="footer-section">
-            <h3>Quick Links</h3>
+        <h3>ShopEase</h3>
 
-            <a href="index.html">Home</a>
-            <a href="product.html">Products</a>
-            <a href="product.html">Categories</a>
-            <a href="index.html#offers">Offers</a>
-        </div>
+        <p>© 2026 ShopEase. All Rights Reserved.</p>
 
-        <!-- Customer Service -->
-        <div class="footer-section">
-            <h3>Customer Service</h3>
+    </footer>
 
-            <a href="#">Contact Us</a>
-            <a href="#">Shipping</a>
-            <a href="#">Returns</a>
-            <a href="#">Privacy Policy</a>
-        </div>
 
-        <!-- Follow Us -->
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 ShopEase. All rights reserved.</p>
-    </div>
-
-</footer>
     <script src="js/script.js"></script>
 
 </body>

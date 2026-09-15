@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>ShopEase - Checkout</title>
+    <title>Checkout - ShopEase</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -16,45 +16,24 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- Navbar -->
 
-    <header>
+    <header class="navbar">
+
+        <div class="logo">
+            ShopEase
+        </div>
 
         <nav>
-
-            <div class="logo">
-                ShopEase
-            </div>
-
-            <div class="nav-links">
-
-                <a href="index.html">Home</a>
-
-                <a href="product.html">Products</a>
-
-                <a href="index.html">Categories</a>
-
-                <a href="index.html">Offers</a>
-
-            </div>
-
-            <div class="nav-actions">
-
-                <a href="login.html" id="loginLink">Login</a>
-
-                <a href="cart.html">
-                    Cart 🛒
-                    <span id="cartCount">0</span>
-                </a>
-
-            </div>
-
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="cart.html">Cart</a>
         </nav>
 
     </header>
 
 
-    <!-- CHECKOUT -->
+    <!-- Checkout -->
 
     <section class="checkout-section">
 
@@ -63,120 +42,169 @@
         <div class="checkout-container">
 
 
-            <!-- CUSTOMER DETAILS -->
+            <!-- Customer Details -->
 
             <div class="checkout-form">
 
-                <h2>Customer Details</h2>
+                <h2>Delivery Details</h2>
 
-                <div class="form-group">
+                <form onsubmit="placeOrder(event)">
 
-                    <label for="name">
-                        Full Name
-                    </label>
+                    <label>Full Name</label>
 
                     <input
                         type="text"
-                        id="name"
-                        placeholder="Enter your name"
+                        id="customerName"
+                        placeholder="Enter your full name"
+                        required
                     >
 
-                </div>
 
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email
-                    </label>
+                    <label>Email</label>
 
                     <input
                         type="email"
-                        id="email"
+                        id="customerEmail"
                         placeholder="Enter your email"
+                        required
                     >
 
-                </div>
 
-
-                <div class="form-group">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
+                    <label>Phone Number</label>
 
                     <input
                         type="tel"
-                        id="phone"
+                        id="customerPhone"
                         placeholder="Enter phone number"
+                        required
                     >
 
-                </div>
 
-
-                <div class="form-group">
-
-                    <label for="address">
-                        Address
-                    </label>
+                    <label>Address</label>
 
                     <textarea
-                        id="address"
-                        placeholder="Enter your address">
+                        id="customerAddress"
+                        placeholder="Enter delivery address"
+                        required>
                     </textarea>
 
-                </div>
+
+                    <label>City</label>
+
+                    <input
+                        type="text"
+                        id="customerCity"
+                        placeholder="Enter city"
+                        required
+                    >
 
 
-                <button
-                    id="placeOrderBtn"
-                    type="button">
+                    <label>Pincode</label>
 
-                    Place Order
+                    <input
+                        type="text"
+                        id="pincode"
+                        placeholder="Enter pincode"
+                        required
+                    >
 
-                </button>
+
+                    <h2>Payment Method</h2>
+
+                    <div class="payment-options">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Cash on Delivery"
+                                checked
+                            >
+
+                            Cash on Delivery
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="UPI"
+                            >
+
+                            UPI
+                        </label>
+
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Card"
+                            >
+
+                            Credit / Debit Card
+                        </label>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="place-order-btn">
+
+                        Place Order
+
+                    </button>
+
+                </form>
+
+                <p id="orderMessage"></p>
 
             </div>
 
 
-            <!-- ORDER SUMMARY -->
+            <!-- Order Summary -->
 
             <div class="checkout-summary">
 
                 <h2>Order Summary</h2>
 
-                <div id="checkoutItems">
+                <div class="checkout-product">
+
+                    <span>
+                        💻 Laptop Model 19
+                    </span>
+
+                    <span>
+                        ₹65,000
+                    </span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Quantity</span>
+
+                    <span>1</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Delivery</span>
+
+                    <span>Free</span>
+
                 </div>
 
                 <hr>
 
-                <div class="summary-row">
-
-                    <span>Subtotal</span>
-
-                    <span id="checkoutSubtotal">
-                        ₹0
-                    </span>
-
-                </div>
-
-                <div class="summary-row">
-
-                    <span>Shipping</span>
-
-                    <span>
-                        ₹0
-                    </span>
-
-                </div>
-
-                <div class="summary-row total">
+                <div class="summary-total">
 
                     <span>Total</span>
 
-                    <span id="checkoutTotal">
-                        ₹0
-                    </span>
+                    <span>₹65,000</span>
 
                 </div>
 
