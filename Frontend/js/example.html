@@ -1,0 +1,44 @@
+function addToCart(productId) {
+
+    const product = products.find(function(product) {
+        return product.id === productId;
+    });
+
+    if (!product) {
+        console.log("Product not found");
+        return;
+    }
+
+    const existingProduct = cart.find(function(item) {
+        return item.id === productId;
+    });
+
+    if (existingProduct) {
+
+        existingProduct.quantity++;
+
+    } else {
+
+        cart.push({
+            id: product.id,
+            name: product.name,
+            category: product.category,
+            price: product.price,
+            description: product.description,
+            image: product.image,
+            quantity: 1
+        });
+
+    }
+
+    // Save cart
+    localStorage.setItem(
+        "shopEaseCart",
+        JSON.stringify(cart)
+    );
+
+    console.log("Cart saved:", cart);
+
+    updateCartCount();
+    alert(product.name + " added to cart!");
+}       
