@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - ShopEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="data:,">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+
+        <nav>
+
+            <!-- Logo -->
+            <div class="logo">
+                ShopEase
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="product.html">Products</a>
+
+                <a href="#">Categories</a>
+
+                <a href="#">Offers</a>
+
+            </div>
+
+            <!-- User Actions -->
+            <div class="nav-actions">
+
+                <a href="login.html" id="loginLink">Login</a>
+
+                <a href="cart.html"> Cart 🛒
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Products Page -->
+    <main>
+
+        <section class="products-page">
+
+            <h1>All Products</h1>
+
+            <p>Explore our wide range of products.</p>
+
+
+            <!-- Search -->
+            <div class="product-search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+                <button>Search</button>
+
+            </div>
+
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+
+    <button data-category="All">All</button>
+
+    <button data-category="Electronics">Electronics</button>
+
+    <button data-category="Sports">Sports</button>
+
+    <button data-category="Home & Kitchen">Home & Kitchen</button>
+
+    <button data-category="Footwear">Footwear</button>
+
+    <button data-category="Fashion">Fashion</button>
+
+    <button data-category="Beauty">Beauty</button>
+
+    <button data-category="Grocery">Grocery</button>
+
+    <button data-category="Books">Books</button>
+
+</div>
+
+
+            <!-- Product Container -->
+            <div
+                class="products"
+                id="productContainer"
+            >
+
+                <!-- Products will be loaded using JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
