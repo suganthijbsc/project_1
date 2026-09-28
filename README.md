@@ -1,6 +1,4 @@
-📌 README Concept
-
-ShopEase – E-Commerce Frontend Website
+📌 ShopEase – E-Commerce Frontend Website
 
 ShopEase is a responsive e-commerce frontend website designed to provide users with a simple and interactive online shopping experience. The website allows users to browse products, explore categories, manage their shopping cart, and navigate through different sections of the online store.
 
