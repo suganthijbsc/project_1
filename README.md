@@ -29,14 +29,15 @@ The main objective of this project is to develop a user-friendly e-commerce fron
 
 ## 📂 Project Structure
 
-text
+``` text
 ShopEase/
 │
 ├── index.html
 ├── product.html
 ├── cart.html
 ├── login.html
+├── checkout.html
+├── order-success.html
 ├── style.css
 ├── script.js
-└── images/
 
