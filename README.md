@@ -29,7 +29,7 @@ The main objective of this project is to develop a user-friendly e-commerce fron
 
 ## 📂 Project Structure
 
-''' text
+text
 ShopEase/
 │
 ├── index.html
@@ -39,4 +39,4 @@ ShopEase/
 ├── style.css
 ├── script.js
 └── images/
-'''
+
